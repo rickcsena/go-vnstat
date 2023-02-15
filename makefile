@@ -16,8 +16,8 @@ build:
 	@$(GOPATH); $(GO) install go-vnstat
 	@cp -r Project/client/* Project/bin/
 
-install:
-	@$(GOPATH); $(GO) get github.com/gin-gonic/gin
+install-dependences:
+	@sudo apt install vnstat
 
 install-client:
 ### check previous data
@@ -26,13 +26,13 @@ install-client:
 		sudo rm -rf $(PWD)/node_modules $(PWD)/package-lock.json ; \
 	fi; \
 
-### check previous global's gulp
-	@if [ -x /usr/local/bin/gulp ] ; \
+### check previous global's bower
+	@if [ -x /usr/local/bin/bower ] ; \
 	then \
 		sudo npm uninstall -g bower ; \
 	fi; \
 
-### install gulp
+### install bower
 	@npm install bower --save-dev
 	@sudo npm install -g bower
 	@npm install

@@ -10,27 +10,28 @@ Operating System: Linux
 - go
 - glide
 
-Default port: 8000
+Default port: 8989
 
 
 ### Dependency Installation
 
 ```bash
 $ glide install
+$ make install-dependences
 ```
 
 ### Building
 
 ```bash
-$ go build -o govnstat
+$ make
 ```
 
 To run the build.
 ```bash
-$ ./govnstat
+$ cd Project/bin && ./go-vnstat
 ```
-Then open your browser, and go to: [http://localhost:8000](http://localhost:8000)
+Then open your browser, and go to: [http://localhost:8989](http://localhost:8989)
 
 # To-do
-- [ ] Makefile
+- [X] Makefile
 - [ ] Use random unused port
