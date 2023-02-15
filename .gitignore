@@ -2,3 +2,6 @@
 vendor/
 bower_components/
 node_modules/
+Project/bin
+Project/pkg
+package-lock.json

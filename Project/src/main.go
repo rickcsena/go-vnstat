@@ -1,8 +1,9 @@
 package main
 
 import (
-	"gopkg.in/gin-gonic/gin.v1"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
@@ -24,5 +25,5 @@ func main() {
 		c.JSON(200, GetAllNetInterfaces())
 	})
 	// Listen and serve
-	router.Run(":8000")
+	router.Run(":8989")
 }
